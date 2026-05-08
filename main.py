@@ -21,7 +21,7 @@ st.code("a=3")
 st.text("안녕~~ 남동고 여러분. 첫 페이지를 만드셨습니다.")
 
 df=pd.read_csv('인천광역시 남동구_고등학교_20240325.csv',encoding='cp949')
-df_latlon=df(['위도', '경도'])
+df_latlon=df([['위도'], ['경도']])
 df_latlon=df_latlon.rename(columns={'위도':'lat', '경도':'lon'})
 #st.map(df_latlon)
 
@@ -30,4 +30,6 @@ m=folium.Map(
     location=[37.40583317,126.7214872],
     zoom_start=15
 )
-folium.Marker().add_to(m)
+folium.Marker(location=[37.40583317,126.7214872],
+             popup="남동고등학교",
+             tooltip="클릭해보세요").add_to(m)
