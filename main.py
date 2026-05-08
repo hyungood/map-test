@@ -19,3 +19,8 @@ st.caption("캡션 입니다")
 st.code("a=3")
 
 st.text("안녕~~ 남동고 여러분. 첫 페이지를 만드셨습니다.")
+
+df=pd.read_csv('인천광역시 남동구_고등학교_20240325.csv',encoding='cp949')
+df_latlon=df(['위도', '경도'])
+df_latlon=df_latlon.rename(columns={'위도':'lat', '경도':'lon'})
+st.map(df_latlon)
