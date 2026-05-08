@@ -13,4 +13,9 @@ st.markdown("# 큰 제목")
 st.markdown("## 작은 제목")
 st.markdown("**굵은 글씨**와 *이탤릭체*")
 
+st.header("헤더 입니다")
+st.subheader("서브헤더 입니다")
+st.caption("캡션 입니다")
+st.code("a=3")
+
 st.text("안녕~~ 남동고 여러분. 첫 페이지를 만드셨습니다.")
